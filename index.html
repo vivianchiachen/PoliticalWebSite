@@ -1,0 +1,936 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+   
+    <title>Which side are you on?</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+
+    <!-- Custom Fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css" type="text/css">
+
+    <!-- Plugin CSS -->
+    <link rel="stylesheet" href="css/animate.min.css" type="text/css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/creative.css" type="text/css">
+<script src="//d3js.org/d3.v3.min.js" charset="utf-8"></script>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body id="page-top">
+
+    <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand page-scroll" href="#page-top">Group One</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a class="page-scroll" href="#about">研究動機</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#services">實驗過程</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#portfolio">資料探索</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#contact">發現＆聯絡</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+
+    <header>
+        <div class="header-content">
+            <div class="header-content-inner">
+                <h1>政治角力</h1>
+                <hr>
+                <p>新舊媒體猜一猜</p>
+                <a href="#about" class="btn btn-primary btn-xl page-scroll">Find Out More</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="bg-primary" id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 text-center">
+                    <h2 class="section-heading">研究動機</h2>
+                    <hr class="light">
+                    <p class="text-faded">分析新媒體與傳統媒體之間的文本差異</p><br>
+                    <p>近幾年公民參政勢力明顯增加，新型態的媒體也隨這波公民參政的力量而出現。
+
+我們想要比較傳統的主流媒體，在「立場」、「用詞」、「新聞產生來源(專業記者or公民記者)」、「文風」上與新型態的媒體的差異。
+
+例如：我們認為新媒體傾向即時性發佈新聞於網路平台、在用詞上較為新穎且直接、撰寫角度頃向以公民利益為基礎，可能因此產生了了不同於舊媒體的事件描述角度及立場，我們想藉由這個計畫實驗是否結果與假設相符，進而藉由立場差異自動偵測新舊媒體政治文本。</p>
+                
+                <a href="#services" class="btn btn-default btn-xl page-scroll">Get Started!</a>
+            </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2 class="section-heading">實驗過程</h2>
+                    <hr class="primary">
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 text-center">
+                    <div class="service-box">
+                        <i class="fa fa-4x fa-diamond wow bounceIn text-primary"></i>
+                        <h3>Definition</h3>
+                        <p><strong style="font-size:25px;">新媒體</strong><br>自2013年7月洪仲丘事件後開始受到關注的媒體。
+                            如: 風傳媒、新頭殼、民報、Nownews…etc</p>
+<p><strong style="font-size:25px;">舊媒體 </strong><br> 傳統媒體。如：自由、中時、蘋果、聯合…etc</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 text-center">
+                    <div class="service-box">
+                        <i class="fa fa-4x fa-paper-plane wow bounceIn text-primary" data-wow-delay=".1s"></i>
+                        <h3>Data Source</h3>
+                        <strong style="font-size:25px;">網路爬蟲</strong><br>
+由第八組羅偉航同學熱心協助抓取六大媒體網路新聞文章.<br>
+<strong style="font-size:25px;">來源</strong><br>
+<ul>
+<li>新媒體 :
+<a href="http://www.storm.mg/">風傳媒</a> 
+<a href="http://www.peoplenews.tw/">民報</a>
+<a href="http://newtalk.tw/">新頭殼</a></li>
+<li>舊媒體 :
+                        <a href="http://www.ltn.com.tw/">自由</a>
+                        <a href="http://www.chinatimes.com/">中時</a>
+                        <a href="http://www.appledaily.com.tw/">蘋果</a></li>
+    </ul>
+ <strong style="font-size:25px;">語料蒐集時間及數量</strong><br>
+從2015.12.29 往前回溯，收集風傳媒、新頭殼、民報、自由、中時、蘋果等六大家媒體，各一千篇，共六千篇政治新聞文本。</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 text-center">
+                    <div class="service-box">
+                        <i class="fa fa-4x fa-newspaper-o wow bounceIn text-primary" data-wow-delay=".2s"></i>
+                        <h3>Data Preprocessing</h3>
+                        <p><strong style="font-size:25px;">去除干擾預測的雜訊</strong><br>
+清除與文風無關用字。如：相關報導、即時新聞、記者的名字。<br>
+                            <strong style="font-size:25px;">斷詞( using jiebaR )</span></strong><br>
+<ul>
+    <li>第一步，是先將網路爬蟲爬下來的6000篇新聞文本先用jiebaR斷詞。</li>
+<li>第二步，利用tm及tmcn的語料庫結構，去除停用詞(中文)</li>
+<li>第三步，取詞頻100以上的詞，建立document-term matrix (dtm)</li>
+<li>第四步，將dtm輸出成文字檔，供機器學習模型訓練</li>
+</ul></p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 text-center">
+                    <div class="service-box">
+                        <i class="fa fa-4x fa-heart wow bounceIn text-primary" data-wow-delay=".3s"></i>
+                        <h3>Hypothesis</h3>
+                        <p>根據特定事件（蔡英文回應媒體追問她是否有炒地皮一事）觀察新、舊媒體的文本。<br>文本顯示新媒體傾向以流水帳方式撰寫,並多描述事件場景中主角當時的情緒或行為。而舊媒體則是簡短摘要事件主角針對議題的回應。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+<div class="col-lg-8 col-lg-offset-2 text-center">
+                    <h2 class="section-heading">Hypothesis Table</h2>
+                     <hr class="primary">
+                    <script src="js/sheetrock.min.js"></script>
+<table id="my-table" class="table table-condensed table-hover table-bordered table-striped">
+    <thead>
+        <tr>
+            <th></th>
+            <th>舊媒體</th>
+            <th>新媒體</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>媒體</td>
+            <td>蘋果、自由、中時</td>
+            <td>風傳媒、新頭殼、民報</td>
+        </tr>
+        <tr>
+            <td>平台</td>
+            <td>報紙</td>
+            <td>網路</td>
+        </tr>
+        <tr>
+            <td>發布頻率</td>
+            <td>定期</td>
+            <td>即時</td>
+        </tr>
+        <tr>
+            <td>記者</td>
+            <td>專業記者</td>
+            <td>公民記者</td>
+        </tr>
+        <tr>
+            <td>立場</td>
+            <td>較親某黨派或某事件主角</td>
+            <td>就中性，以「看故事發展」角度撰寫</td>
+        </tr>
+        <tr>
+            <td>語言</td>
+            <td>用語叫制式、較摘要性事件描述</td>
+            <td>似流水帳，多事件細節（人物情緒描述）、新用語較多</td>
+        </tr>
+    </tbody>
+</table>
+                    <script>
+                        var mygoogleSpreadsheet = src="https://docs.google.com/spreadsheets/d/1fU0mG1g_0yA0B7OZuo2FgsWNOdf9KJkeaXQOt9eP1RQ/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false">
+                        $("#my-table").sheetrock({
+                            url: mygoogleSpreadsheet,
+                            query: "select A,B,C"
+                                //                        query: "select A,B,C,D,E,L where E = 'Both' order by L desc"
+                        });
+                    </script>
+
+</div>
+
+    </section>
+
+    <section class="no-padding" id="portfolio">
+        <div class="container-fluid">
+            <div class="row no-gutter">
+                <div class="col-lg-4 col-sm-6">
+                    <a href="#pingguo" class="portfolio-box">
+                        <img src="img/portfolio/pingguo.jpg" class="img-responsive" alt="">
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-category text-faded">
+                                    舊媒體
+                                </div>
+                                <div class="project-name">
+                                    蘋果日報
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <a href="#zhongshi" class="portfolio-box">
+                        <img src="img/portfolio/zhongshi.jpg" class="img-responsive" alt="">
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-category text-faded">
+                                    舊媒體
+                                </div>
+                                <div class="project-name">
+                                    中國時報
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <a href="#ziyou" class="portfolio-box">
+                        <img src="img/portfolio/ziyou.jpg" class="img-responsive" alt="">
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-category text-faded">
+                                    舊媒體
+                                </div>
+                                <div class="project-name">
+                                    自由時報
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <a href="#xintouke" class="portfolio-box">
+                        <img src="img/portfolio/newtalk.jpg" class="img-responsive" alt="">
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-category text-faded">
+                                    新媒體
+                                </div>
+                                <div class="project-name">
+                                    新頭殼
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <a href="#fengchuanmei" class="portfolio-box">
+                        <img src="img/portfolio/Storm.jpg" class="img-responsive" alt="">
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-category text-faded">
+                                    新媒體
+                                </div>
+                                <div class="project-name">
+                                    風傳媒
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <a href="#ming" class="portfolio-box">
+                        <img src="img/portfolio/ming.jpg" class="img-responsive" alt="">
+                        <div class="portfolio-box-caption">
+                            <div class="portfolio-box-caption-content">
+                                <div class="project-category text-faded">
+                                    新媒體
+                                </div>
+                                <div class="project-name">
+                                    民報
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <aside class="bg-dark">
+        <h2 class="section-heading text-center">Exploratory Data</h2>
+                     <hr class="primary">
+        <p class="text-center">斷詞之後，我們算出詞頻，並將各大報的候選人依照出現頻率多寡排出，我們發現....</p>
+        <div id="pingguo" class="container text-center">
+            <h2>蘋果日報</h2>
+            <h4>各候選人出現次數</h4>
+            <style>
+                #pingguo .chart01{
+                width: 500px;
+                    height: 180px;
+                
+                }
+                
+                #pingguo .chart01 text {
+                    fill: white;
+                    font: 10px sans-serif;
+                    text-anchor: start;
+                }
+    </style>
+            <svg class="chart01"></svg>
+             
+            <script>
+                var width = 420,
+                    barHeight = 20;
+
+                var x1 = d3.scale.linear()
+                    .range([0, width]);
+                    
+
+                var chart01 = d3.select("#pingguo .chart01")
+                    .attr("width", width);
+          
+                
+                
+                
+                d3.csv("pingguo.csv", type, function (error, data) {
+                    x1.domain([0, d3.max(data, function (d) {
+                        return d.value;
+                    })]);
+                    
+                
+
+                    chart01.attr("height", barHeight * data.length);
+
+                    var colors = {'民進黨': 'green',
+                                  '蔡英文': 'green',
+                                  '陳建仁': 'green',
+                                  '國民黨':'blue',
+                                  '朱立倫':'blue',
+                                  '王如玄':'blue',
+                                 '親民黨':'orange',
+                                  '宋楚瑜':'orange',
+                                  '徐欣瑩':'orange',
+}
+
+                    var bar01 = chart01.selectAll("g")
+                        .data(data)
+                        .enter().append("g")
+                        .attr("transform", function (d, i) {
+                            return "translate(0," + i * barHeight + ")";
+                        
+                        })
+                        .style("fill", function(d){ return colors[d.name]; console.log("show me the colors", colors[d.name]); console.log("what is d", d) });           
+                    
+                    
+                    
+                    bar01.append("rect")
+                        .attr("width", function (d) {
+                            return x1(d.value);
+                        })
+                        .attr("height", barHeight - 1)
+                        .style("fill", function(d){ 
+                               console.log("hi")
+                               console.log(colors[d.name]); 
+                               console.log("what is d", d, "ah this is d") 
+                               console.log("what is d's name", d.name, "ah this is d") 
+                               return colors[d.name]; 
+                               });           
+
+                    bar01.append("text")
+                        .attr("x1", function (d) {
+                            return x1(d.value) - 3;
+                        })
+                        .attr("y", barHeight / 2)
+                        .attr("dy", ".35em")
+                    
+                        .text(function (d) {
+                            return d.name + ":" + d.value;
+                        });
+                });
+
+                function type(d) {
+                    d.value = +d.value; // coerce to number
+                    return d;
+                }
+            </script>
+            
+            <a href="#portfolio" class="btn btn-default btn-xl wow tada">Back</a>
+        </div>
+
+
+
+        <div id="zhongshi" class="container text-center">
+            <h2>中國時報</h2>
+            <h4>各候選人出現次數</h4>
+            <style>
+                .chart02{
+                width:500px;
+                    height:180px;
+                
+                }
+                .chart02 rect {
+                    fill: #d7b98e;
+                }
+                
+                .chart02 text {
+                    fill: white;
+                    font: 10px sans-serif;
+                    text-anchor: start;
+                }
+            </style>
+            <svg class="chart02"></svg>
+            <script>
+                var width = 420,
+                    barHeight = 20;
+
+                var x2 = d3.scale.linear()
+                    .range([0, width]);
+
+                var chart02 = d3.select("#zhongshi .chart02")
+                    .attr("width", width);
+
+                d3.csv("zhongshi.csv", type, function (error, data) {
+                    x2.domain([0, d3.max(data, function (d) {
+                        return d.value;
+                    })]);
+
+                    chart02.attr("height", barHeight * data.length);
+                    
+                    
+                    
+                    var colors = {'民進黨': 'green',
+                                  '蔡英文': 'green',
+                                  '陳建仁': 'green',
+                                  '國民黨':'blue',
+                                  '朱立倫':'blue',
+                                  '王如玄':'blue',
+                                 '親民黨':'orange',
+                                  '宋楚瑜':'orange',
+                                  '徐欣瑩':'orange',
+}
+
+                    var bar02 = chart02.selectAll("g")
+                        .data(data)
+                        .enter().append("g")
+                        .attr("transform", function (d, i) {
+                            return "translate(0," + i * barHeight + ")";
+                        });
+
+                    bar02.append("rect")
+                        .attr("width", function (d) {
+                            return x2(d.value);
+                        })
+                        .attr("height", barHeight - 1)
+                    .style("fill", function(d){ return colors[d.name]; console.log("show me the colors", colors[d.name]); console.log("what is d", d) });     
+
+                    bar02.append("text")
+                        .attr("x2", function (d) {
+                            return x2(d.value) - 3;
+                        })
+                        .attr("y", barHeight / 2)
+                        .attr("dy", ".35em")
+                        .text(function (d) {
+                            return d.name + ":" + d.value;
+                        });
+                });
+
+                function type(d) {
+                    d.value = +d.value; // coerce to number
+                    return d;
+                }
+            </script>
+            <a href="#portfolio" class="btn btn-default btn-xl wow tada">Back</a>
+        </div>
+
+
+
+        <div id="ziyou" class="container text-center">
+            <h2>自由時報</h2>
+            <h4>各候選人出現次數</h4>
+            <style>
+                .chart03{
+                width:500px;
+                    height:180px;
+                }
+                .chart03 rect {
+                    fill: #d7b98e;
+                }
+                
+                .chart03 text {
+                    fill: white;
+                    font: 10px sans-serif;
+                    text-anchor: start;
+                }
+            </style>
+            <svg class="chart03"></svg>
+            <script>
+                var width = 420,
+                    barHeight = 20;
+
+                var x3 = d3.scale.linear()
+                    .range([0, width]);
+
+                var chart03 = d3.select(".chart03")
+                    .attr("width", width);
+
+                d3.csv("ziyou.csv", type, function (error, data) {
+                    x3.domain([0, d3.max(data, function (d) {
+                        return d.value;
+                    })]);
+
+                    chart03.attr("height", barHeight * data.length);
+
+                    var colors = {'民進黨': 'green',
+                                  '蔡英文': 'green',
+                                  '陳建仁': 'green',
+                                  '國民黨':'blue',
+                                  '朱立倫':'blue',
+                                  '王如玄':'blue',
+                                 '親民黨':'orange',
+                                  '宋楚瑜':'orange',
+                                  '徐欣瑩':'orange',
+}
+                    
+                    
+                    
+                    var bar03 = chart03.selectAll("g")
+                        .data(data)
+                        .enter().append("g")
+                        .attr("transform", function (d, i) {
+                            return "translate(0," + i * barHeight + ")";
+                        });
+
+                    bar03.append("rect")
+                        .attr("width", function (d) {
+                            return x3(d.value);
+                        })
+                        .attr("height", barHeight - 1)
+                    .style("fill", function(d){ return colors[d.name]; console.log("show me the colors", colors[d.name]); console.log("what is d", d) });     
+
+                    bar03.append("text")
+                        .attr("x3", function (d) {
+                            return x3(d.value) - 3;
+                        })
+                        .attr("y", barHeight / 2)
+                        .attr("dy", ".35em")
+                        .text(function (d) {
+                            return d.name + ":" + d.value;
+                        });
+                });
+
+                function type(d) {
+                    d.value = +d.value; // coerce to number
+                    return d;
+                }
+            </script>
+            <a href="#portfolio" class="btn btn-default btn-xl wow tada">Back</a>
+            
+            
+        <div id="xintouke" class="container text-center">
+            <h2>新頭殼</h2>
+            <h4>各候選人出現次數</h4>
+            <style>
+                .chart04{
+                width: 500px;
+                    height:180px;
+                
+                }
+                
+                .chart04 rect {
+                    fill: #d7b98e;
+                }
+                
+                .chart04 text {
+                    fill: white;
+                    font: 10px sans-serif;
+                    text-anchor: start;
+                }
+            </style>
+            <svg class="chart04"></svg>
+            <script>
+                var width = 420,
+                    barHeight = 20;
+
+                var x4 = d3.scale.linear()
+                    .range([0, width]);
+
+                var chart04 = d3.select(".chart04")
+                    .attr("width", width);
+
+                d3.csv("xintouke.csv", type, function (error, data) {
+                    x4.domain([0, d3.max(data, function (d) {
+                        return d.value;
+                    })]);
+
+                    chart04.attr("height", barHeight * data.length);
+                    
+                    
+                    var colors = {'民進黨': 'green',
+                                  '蔡英文': 'green',
+                                  '陳建仁': 'green',
+                                  '國民黨':'blue',
+                                  '朱立倫':'blue',
+                                  '王如玄':'blue',
+                                 '親民黨':'orange',
+                                  '宋楚瑜':'orange',
+                                  '徐欣瑩':'orange',
+}
+
+                    var bar04 = chart04.selectAll("g")
+                        .data(data)
+                        .enter().append("g")
+                        .attr("transform", function (d, i) {
+                            return "translate(0," + i * barHeight + ")";
+                        });
+
+                    bar04.append("rect")
+                        .attr("width", function (d) {
+                            return x4(d.value);
+                        })
+                        .attr("height", barHeight - 1)
+                    .style("fill", function(d){ return colors[d.name]; console.log("show me the colors", colors[d.name]); console.log("what is d", d) });     
+
+                    bar04.append("text")
+                        .attr("x4", function (d) {
+                            return x4(d.value) - 3;
+                        })
+                        .attr("y", barHeight / 2)
+                        .attr("dy", ".35em")
+                        .text(function (d) {
+                            return d.name + ":" + d.value;
+                        });
+                });
+
+                function type(d) {
+                    d.value = +d.value; // coerce to number
+                    return d;
+                }
+            </script>
+            <a href="#portfolio" class="btn btn-default btn-xl wow tada">Back</a>
+        </div>
+
+
+
+        <div id="fengchuanmei" class="container text-center">
+            <h2>風傳媒</h2>
+            <h4>各候選人出現次數</h4>
+            <style>
+                .chart05{
+                width: 500px;
+                    height:180px;
+                
+                }
+                
+                .chart05 rect {
+                    fill: #d7b98e;
+                }
+                
+                .chart05 text {
+                    fill: white;
+                    font: 10px sans-serif;
+                    text-anchor: start;
+                }
+            </style>
+            <svg class="chart05"></svg>
+            <script>
+                var width = 420,
+                    barHeight = 20;
+
+                var x5 = d3.scale.linear()
+                    .range([0, width]);
+
+                var chart05 = d3.select(".chart05")
+                    .attr("width", width);
+
+                d3.csv("fengchuanmei.csv", type, function (error, data) {
+                    x5.domain([0, d3.max(data, function (d) {
+                        return d.value;
+                    })]);
+
+                    chart05.attr("height", barHeight * data.length);
+                    
+                    
+                    
+                    var colors = {'民進黨': 'green',
+                                  '蔡英文': 'green',
+                                  '陳建仁': 'green',
+                                  '國民黨':'blue',
+                                  '朱立倫':'blue',
+                                  '王如玄':'blue',
+                                 '親民黨':'orange',
+                                  '宋楚瑜':'orange',
+                                  '徐欣瑩':'orange',
+}
+
+                    var bar05 = chart05.selectAll("g")
+                        .data(data)
+                        .enter().append("g")
+                        .attr("transform", function (d, i) {
+                            return "translate(0," + i * barHeight + ")";
+                        });
+
+                    bar05.append("rect")
+                        .attr("width", function (d) {
+                            return x5(d.value);
+                        })
+                        .attr("height", barHeight - 1)
+                    .style("fill", function(d){ return colors[d.name]; console.log("show me the colors", colors[d.name]); console.log("what is d", d) });     
+
+                    bar05.append("text")
+                        .attr("x5", function (d) {
+                            return x5(d.value) - 3;
+                        })
+                        .attr("y", barHeight / 2)
+                        .attr("dy", ".35em")
+                        .text(function (d) {
+                            return d.name + ":" + d.value;
+                        });
+                });
+
+                function type(d) {
+                    d.value = +d.value; // coerce to number
+                    return d;
+                }
+            </script>
+            <a href="#portfolio" class="btn btn-default btn-xl wow tada">Back</a>
+        </div>
+
+
+
+        <div id="ming" class="container text-center">
+            <h2>民報</h2>
+            <h4>各候選人出現次數</h4>
+            <style>
+                .chart06{
+                width:500px;
+                    height:180px;
+                }
+                
+                
+                .chart06 rect {
+                    fill: #d7b98e;
+                }
+                
+                .chart06 text {
+                    fill: white;
+                    font: 10px sans-serif;
+                    text-anchor: start;
+                }
+            </style>
+            <svg class="chart06"></svg>
+            <script>
+                var width = 420,
+                    barHeight = 20;
+
+                var x6 = d3.scale.linear()
+                    .range([0, width]);
+
+                var chart06 = d3.select(".chart06")
+                    .attr("width", width);
+
+                d3.csv("ming.csv", type, function (error, data) {
+                    x6.domain([0, d3.max(data, function (d) {
+                        return d.value;
+                    })]);
+
+                    chart06.attr("height", barHeight * data.length);
+                    
+                    
+                    
+                    var colors = [{'民進黨': 'green',
+                                  '蔡英文': 'green',
+                                  '陳建仁': 'green',
+                                  '國民黨':'blue',
+                                  '朱立倫':'blue',
+                                  '王如玄':'blue',
+                                 '親民黨':'orange',
+                                  '宋楚瑜':'orange',
+                                  '徐欣瑩':'orange',
+}]
+
+                    var bar06 = chart06.selectAll("g")
+                        .data(data)
+                        .enter().append("g")
+                        .attr("transform", function (d, i) {
+                            return "translate(0," + i * barHeight + ")";
+                        });
+
+                    bar06.append("rect")
+                        .attr("width", function (d) {
+                            return x6(d.value);
+                        })
+                        .attr("height", barHeight - 1)
+                    .style("fill", function(d){ return colors[d.name]; console.log("show me the colors", colors[d.name]); console.log("what is d", d) });     
+
+                    bar06.append("text")
+                        .attr("x6", function (d) {
+                            return x6(d.value) - 3;
+                        })
+                        .attr("y", barHeight / 2)
+                        .attr("dy", ".35em")
+                        .text(function (d) {
+                            return d.name + ":" + d.value;
+                        });
+                });
+
+                function type(d) {
+                    d.value = +d.value; // coerce to number
+                    return d;
+                }
+            </script>
+            <a href="#portfolio" class="btn btn-default btn-xl wow tada">Back</a>
+        </div>
+    </aside>
+
+    
+    
+    
+    
+    <section id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 text-center">
+                    <h2 class="section-heading">我們的發現</h2>
+                    <hr class="primary">
+                    
+                </div>
+                <div class="col-lg-4 col-lg-offset-2 text-center">
+                    <p>關於舊媒體</p>
+                    <li>舊媒體中我們發現特定兩政黨被提及次數遠多於第三個政黨。</li>
+<li>對於副手的提及次數相對都較少，讓我們聯想到是否有偶像化特定人物。</li>
+<li>提及各政黨或副手的次數都較新媒體少。</li>
+                </div>
+                <div class="col-lg-4 text-center">
+                    <p>關於新媒體</p>
+                    <li>新媒體中我們看到正、副手被提及的次數高出許多，如「王如玄」，我們就會聯想到新媒體可能較不偏重特定人物，反而事件的發燒程度與人物被提及次數成正比。</li>
+<li>新媒體中我們也發現「民報」的平均字數較多，但是提及個政黨或人物卻沒有比較多。</li>
+                </div>
+                <div class="col-lg-8 col-lg-offset-2 text-center">
+                    <br>
+                    <br>
+                    <h4 style="color:darkorange;" class="section-heading">綜合以上，我們可以發現利用詞頻(word frequency)能達成區分新舊媒體的目標!</h4>     
+                </div>
+            </div>
+        </div>
+        <br><br>
+<br>
+<br>
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 text-center">
+            <h2 class="section-heading">作者群</h2>
+            <hr class="primary">
+            <p>Let's Get In Touch</p>
+            <p><a href="https://github.com/sunprinceS/TaiwanNews_classifier" target="_blank">Try it yourself! 試試看我們的分類器吧！</a></p>
+             <p><a href="https://sunprinces.gitbooks.io/-/content/" target="_blank">Visit us on Github!</a></p>
+            </div>
+        </div>
+           
+                <div class="col-sm-3">
+                <p><strong>鐘豪</strong></p>
+                    <a href="https://www.facebook.com/chung.hao" target="_blank"><img src="img/zhonghao.jpg" class="img-circle person" alt="Random Name" width="150" height="150"></a>
+                </div>
+                <div class="col-sm-3">
+                    <p><strong>徐瑞陽</strong></p>
+                    <a href="http://facebook.com/ruiyang.xu1" target="_blank"><img src="img/tonyhsu.jpg" class="img-circle person" alt="Random Name" width="150" height="150"></a>
+                </div>
+                <div class="col-sm-3">
+                    <p><strong>陳家葦</strong></p>
+                    
+                    <a href="https://www.facebook.com/vividchen" target="_blank"><img src="img/vivianchen.jpg" class="img-circle person" alt="Random Name" width="150" height="150"></a>
+                    
+                </div>
+                <div class="col-sm-3">
+                    <p><strong>李佳臻</strong></p>
+                    <a href="https://www.facebook.com/chiachen.lee" target="_blank"><img src="img/chiachen.jpg" class="img-circle person" alt="Random Name" width="150" height="150"></a>
+                </div>
+            
+                
+            
+    </section>
+
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="js/jquery.easing.min.js"></script>
+    <script src="js/jquery.fittext.js"></script>
+    <script src="js/wow.min.js"></script>
+
+    <!-- Custom Theme JavaScript -->
+    <script src="js/creative.js"></script>
+
+</body>
+
+</html>
